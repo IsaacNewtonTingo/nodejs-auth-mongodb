@@ -8,9 +8,11 @@ app.use(express.json());
 
 //Import routes
 const authRoute = require("./routes/auth");
+const postRoute = require("./routes/posts");
 
 //Router Middlewares
 app.use("/api/users", authRoute);
+app.use("/api/posts", postRoute);
 
 app.listen(3000, () => {
   console.log("Listening");
